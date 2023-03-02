@@ -3,8 +3,12 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("<h4>Hello</h4>")
+    return render(request, 'index.html')
 
 
 def contacts(request):
-    return HttpResponse('<h3>Контакты</h3>')
+    return render(request, 'contacts.html')
+
+
+def about(request):
+    return render(request, 'about.html')
